@@ -137,5 +137,9 @@ wrong_base_error:
 
 	li $v0,10 #program end
 	syscall
+       
+        jr $ra	 	
+	 	
+
 	
 		
