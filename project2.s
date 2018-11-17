@@ -34,4 +34,23 @@ move_over_spaces:
 
 char_handling :
 	lb $t1,0($t0)
-	addi $t0, $t0, 1			
+	addi $t0, $t0, 1addi $t3, $t3, 1
+	beq $t1, 10, back_to_beginning 
+	beq $t1, 0, back_to_beginning 
+	bne $t1, 32, char_handling 
+	
+more_char_or_spaces_handling:
+        lb $t1,0($t0)
+	addi $t0, $t0, 1
+	addi $t3, $t3, 1
+	beq $t1, 10, back_to_beginning 
+	beq $t1, 0, back_to_beginning 
+        bne $t1, 32, wrong_base_error
+	j more_char_or_spaces_handling 
+
+
+back_to_beginning:
+	sub $t0, $t0, $t3 	#restarting the pointer in char_array
+	la $t3, 0 		#restaring the counter
+	
+		
