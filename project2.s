@@ -1,12 +1,5 @@
 .data
-str:
-     .space 16
-
-.text
-main:
-	li $v0, 8
-	la $a0, str	
-	li $a0, 16
-      
-	li $v0, 10
-	syscall
+input_long: .asciiz "Input is too long."
+invalid_base: .asciiz "Invalid base-31 number."
+empty_input: .asciiz "Input is empty."
+string_input: .space 500000
