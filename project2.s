@@ -97,5 +97,12 @@ conversion:
 	blt $t1, 58, Number #checks if character is between 48 and 57
 	blt $t1, 65, wrong_base_error #checks if character is between 58 and 64
 	blt $t1, 90, Upper_Case #checks if character is between 65 and 89
+        blt $t1, 97, wrong_base_error #checks if character is between 90 and 96
+	blt $t1, 122, Lower_Case #checks if character is between 97 and 121
+	blt $t1, 128, wrong_base_error #checks if character is between 122 and 127
+
+
+Upper_Case:
+	addi $t1, $t1, -55 
 	
 		
