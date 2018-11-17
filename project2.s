@@ -69,5 +69,17 @@ reset_pointer:
 	
 search_greatest_power:	
 	beq $s1, 0, conversion	#Bringing base to last power of the string
+        mult $t4, $s0
+	mflo $t4
+	sub $s1, $s1, 1
+	j search_greatest_power
+
+multiply:
+        mult $t1, $t4
+	mflo $t5	#sub_sum
+	add $t6, $t6, $t5 #final sum
+	
+	beq $t4, 1, Exit
+	div $t4, $s0 #dividing t4 to the next power of base
 	
 		
