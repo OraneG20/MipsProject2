@@ -104,5 +104,12 @@ conversion:
 
 Upper_Case:
 	addi $t1, $t1, -55 
+        blt $t1, 97, wrong_base_error #checks if character is between 90 and 96
+	blt $t1, 122, Lower_Case #checks if character is between 97 and 121
+	blt $t1, 128, wrong_base_error #checks if character is between 122 and 127
+
+
+Upper_Case:
+	addi $t1, $t1, -55 
 	
 		
