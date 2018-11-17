@@ -63,5 +63,11 @@ back_to_beginning:
 	
 reset_pointer:
 	sub $t0, $t0, $t3
+        sub $t3, $t3, $t4
+	lb $t1, ($t0)
+	sub $s1, $t3, $t4
+	
+search_greatest_power:	
+	beq $s1, 0, conversion	#Bringing base to last power of the string
 	
 		
