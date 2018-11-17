@@ -111,5 +111,11 @@ Upper_Case:
 
 Upper_Case:
 	addi $t1, $t1, -55 
+        addi $t1, $t1, -48 	
+	j multiply			
+
+#BRANCHES FOR ERROR MESSAGES	
+empty_error:
+	la $a0, empty_input #loading string
 	
 		
