@@ -52,5 +52,10 @@ more_char_or_spaces_handling:
 back_to_beginning:
 	sub $t0, $t0, $t3 	#restarting the pointer in char_array
 	la $t3, 0 		#restaring the counter
+        lb $t1, ($t0)
+	addi $t0, $t0, 1
+	addi $t3, $t3, 1 
+	beq $t1, 10, reset_pointer
+	beq $t1, 0, reset_pointer
 	
 		
