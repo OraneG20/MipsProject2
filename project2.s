@@ -124,5 +124,11 @@ empty_error:
 	syscall
 
 error_for_long_inputs:
+        la $a0, input_long #loading string
+	li $v0, 4 		
+	syscall
+
+	li $v0,10 #program ends
+	syscall
 	
 		
