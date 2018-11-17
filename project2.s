@@ -130,5 +130,12 @@ error_for_long_inputs:
 
 	li $v0,10 #program ends
 	syscall
+wrong_base_error:
+	la $a0, invalid_base #loading string
+	li $v0, 4 
+	syscall
+
+	li $v0,10 #program end
+	syscall
 	
 		
