@@ -16,4 +16,10 @@ add $t3, $0, 0
 
 
 la $t0, string_input			
-lb $t1,0($t0) 		
+lb $t1,0($t0) 
+beq $t1, 10, empty_error #Check for empty input	
+beq $t1, 0 empty_error		
+
+addi $s0, $0, 31 
+addi $t4, $0, 1 	
+addi $t5, $0, 0 			
