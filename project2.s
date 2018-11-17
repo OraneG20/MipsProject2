@@ -29,4 +29,9 @@ move_over_spaces:
 	addi $t0, $t0, 1
 	addi $t3, $t3, 1
 	beq $t1, 32, move_over_spaces
-				
+	beq $t1, 10, empty_error
+	beq $t1, $0, empty_error
+
+char_handling :
+	lb $t1,0($t0)
+	addi $t0, $t0, 1			
