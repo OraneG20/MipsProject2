@@ -117,5 +117,12 @@ Upper_Case:
 #BRANCHES FOR ERROR MESSAGES	
 empty_error:
 	la $a0, empty_input #loading string
+        li $v0, 4 
+	syscall
+
+	li $v0,10 #program ends
+	syscall
+
+error_for_long_inputs:
 	
 		
