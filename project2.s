@@ -87,5 +87,10 @@ multiply:
 	j conversion
 
 Exit:
+     move $a0, $t6 #moves sum to a0
+	li $v0, 1 #prints contents of a0
+	syscall
+	li $v0,10 # Program ends
+	syscall
 	
 		
