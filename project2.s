@@ -57,5 +57,11 @@ back_to_beginning:
 	addi $t3, $t3, 1 
 	beq $t1, 10, reset_pointer
 	beq $t1, 0, reset_pointer
+        beq $t1, 32, reset_pointer
+	beq $t3, 5, error_for_long_inputs
+	j length_search
+	
+reset_pointer:
+	sub $t0, $t0, $t3
 	
 		
