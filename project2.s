@@ -10,3 +10,10 @@ main:
 li $v0, 8   #getting user_input
 la $a0, string_input
 li $a1, 500000
+syscall
+add $t1, $0, 0 
+add $t3, $0, 0 
+
+
+la $t0, string_input			
+lb $t1,0($t0) 		
